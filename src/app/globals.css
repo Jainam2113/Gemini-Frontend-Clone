@@ -1,26 +1,43 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Test if this CSS file loads */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Force Tailwind classes to work */
+.bg-blue-500 {
+  background-color: #3b82f6 !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.p-5 {
+  padding: 1.25rem !important;
+}
+
+.m-5 {
+  margin: 1.25rem !important;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important;
+}
+
+.from-blue-50 {
+  --tw-gradient-from: #eff6ff !important;
+  --tw-gradient-to: rgb(239 246 255 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-indigo-100 {
+  --tw-gradient-to: #e0e7ff !important;
 }
